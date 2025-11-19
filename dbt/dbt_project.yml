@@ -1,0 +1,26 @@
+name: my_dbt
+version: '1.0'
+config-version: 2
+
+profile: my_profile
+
+model-paths:
+  - models
+analysis-paths:
+  - analysis
+test-paths:
+  - tests
+seed-paths:
+  - seeds
+macro-paths:
+  - macros
+
+seeds:
+  my_dbt:
+    +quote_columns: true
+    +header: true
+
+target-path: target
+clean-targets:
+  - target
+  - dbt_modules

@@ -1,0 +1,14 @@
+my_profile:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: myuser
+      password: mypassword
+      port: 5432
+      dbname: mydatabase
+      schema: public
+      threads: 1
+      keepalives_idle: 0
+      sslmode: prefer
